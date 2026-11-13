@@ -20,6 +20,15 @@ For the experiments below I used a random sample of **12,000 products** (10K+), 
 
 TF-IDF, SVD and PCA are all fit **inside each fold** on training rows only, so there is no leakage.
 
+## Competition result (Amazon ML Challenge 2025)
+
+| | |
+|---|---|
+| Final SMAPE on Amazon's **hidden test set** (official leaderboard) | **51.20%** |
+| Rank | **Top 200 of 13,500+ teams** |
+
+The leaderboard score was calculated by Amazon on test products whose prices were never shared with participants. The numbers below are my own 5-fold cross-validation on a 12,000-product sample of the training data, rebuilt after the challenge. That's why they differ from the leaderboard score.
+
 ## Results (5-fold cross-validation, 12,000 products)
 
 | Step | CV SMAPE |
