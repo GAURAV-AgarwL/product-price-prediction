@@ -1,0 +1,22 @@
+{
+  "source": "Kaggle run, notebook AMLC'25 version 2 (GPU T4 x2, 53m 32s)",
+  "products_used": 12000,
+  "folds": 5,
+  "images_downloaded": 12000,
+  "cv_smape_by_step": {
+    "1. Baseline (raw value + unit)": 68.61,
+    "2. + engineered listing features": 60.65,
+    "3. + TF-IDF text (SVD)": 56.24,
+    "4. + sentence-transformer text embeddings": 56.68,
+    "5. + CLIP image embeddings": 55.34,
+    "6. Tuned LightGBM (all features)": 54.22,
+    "7. Final ensemble (LightGBM x3 seeds + Ridge)": 54.04
+  },
+  "ridge_tfidf_alone_smape": 58.38,
+  "baseline_smape": 68.61,
+  "final_smape": 54.04,
+  "relative_improvement_pct": 21.2,
+  "feature_group_gain_share_pct": {"TF-IDF text": 39.9, "Image (CLIP)": 26.7, "Sentence embedding": 17.4, "Listing features": 15.9},
+  "top_listing_features_by_gain": ["value_oz", "value_per_pack", "value", "pack", "name_len"],
+  "best_lgbm_params": {"num_leaves": 127, "learning_rate": 0.02, "n_estimators": 2500, "colsample_bytree": 0.4, "min_child_samples": 40}
+}
